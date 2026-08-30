@@ -1,5 +1,11 @@
 # Deep Reinforcement Learning for DC Bus Voltage Regulation
 
+**Author:** T Rakesh Reddy  
+**Project:** AI/ML Voltage Controller for DC Microgrids & Power Converters  
+**Method:** Deep Deterministic Policy Gradient (DDPG) in MATLAB  
+
+---
+
 An AI/ML-driven continuous voltage controller designed to replace traditional Proportional-Integral (PI) control in DC microgrid / DC bus systems using **Deep Deterministic Policy Gradient (DDPG)**.
 
 ---
@@ -115,3 +121,9 @@ run plot_results
 clear classes;
 run train_ddpg_dcbus
 ```
+
+---
+
+## 👤 Author
+**T Rakesh Reddy**  
+*Deep Reinforcement Learning for Power Systems & Converter Control*
