@@ -10,7 +10,7 @@ An AI/ML-driven continuous voltage controller designed to replace traditional Pr
 
 ---
 
-## 🎯 Project Objectives
+## Project Objectives
 
 1. **Replace Traditional PI Control:** Formulate DC bus voltage stabilization as a continuous Deep Reinforcement Learning (DRL) control problem.
 2. **Minimize Error ($V_{\text{err}}$):** Regulate sensed bus voltage $V$ to target reference setpoint $V^* = 300\,\text{V}$ under dynamic, non-linear disturbance loads.
@@ -18,7 +18,7 @@ An AI/ML-driven continuous voltage controller designed to replace traditional Pr
 
 ---
 
-## 📐 System Physics & Architecture
+## System Physics & Architecture
 
 ```
   V* (300V Ref) ──(+)──┐
@@ -38,7 +38,7 @@ An AI/ML-driven continuous voltage controller designed to replace traditional Pr
 
 ---
 
-## 🧠 DRL Formulation (DDPG)
+##  DRL Formulation (DDPG)
 
 ### Observation Space (State)
 Continuous state vector $S_t \in \mathbb{R}^3$:
@@ -55,17 +55,7 @@ Where $R_{\text{bonus}} = 1.0 \times \left(1 - \frac{|V_{\text{err}}|}{2.0}\righ
 
 ---
 
-## 📈 Training Progress Monitor
-
-![MATLAB DDPG Training Monitor](training_monitor_screenshot.png)
-
-- **Total Episodes:** 1,000 / 1,000 (100% completion)
-- **Convergence:** Reward smoothly climbed from $\approx -3,500$ and stabilized at $\approx -529$.
-- **Stability:** Zero divergence or episode crashes across 2,000,000 simulation steps.
-
----
-
-## 📊 Comparative Performance Results
+##  Comparative Performance Results
 
 ![DRL vs Historical PI Controller Performance](validation_results_v3.png)
 
@@ -73,9 +63,9 @@ Where $R_{\text{bonus}} = 1.0 \times \left(1 - \frac{|V_{\text{err}}|}{2.0}\righ
 
 | Performance Metric | Historical PI Controller | Trained DRL Controller | Winner |
 |---|:---:|:---:|:---:|
-| **Episode Survival** | N/A | **2,000 / 2,000 steps (100%)** | ✅ **Stable** |
-| **Max Peak Error ($|V_{\text{err}}|$)** | **44.00 V** | **6.35 V** | 🏆 **DRL (85.6% lower peak spike)** |
-| **Voltage Operating Range** | $[256.0, 344.0]\,\text{V}$ | $[294.04, 306.35]\,\text{V}$ | 🏆 **DRL (Strict safety bounds)** |
+| **Episode Survival** | N/A | **2,000 / 2,000 steps (100%)** |  **Stable** |
+| **Max Peak Error ($|V_{\text{err}}|$)** | **44.00 V** | **6.35 V** |  **DRL (85.6% lower peak spike)** |
+| **Voltage Operating Range** | $[256.0, 344.0]\,\text{V}$ | $[294.04, 306.35]\,\text{V}$ |  **DRL (Strict safety bounds)** |
 | **Mean Absolute Error (MAE)** | **2.15 V** | **3.10 V** | PI Baseline |
 | **RMS Voltage Error** | **3.36 V** | **3.70 V** | PI Baseline |
 | **Regulation within $\pm 0.5\,\text{V}$** | **17.1%** | **9.4%** | PI Baseline |
@@ -83,7 +73,7 @@ Where $R_{\text{bonus}} = 1.0 \times \left(1 - \frac{|V_{\text{err}}|}{2.0}\righ
 
 ---
 
-## 🚀 Key Takeaways & Analysis
+##  Key Takeaways & Analysis
 
 1. **Superior Overshoot Rejection:** The PI controller exhibited severe voltage spikes of up to **$44\,\text{V}$** during transient events. The DRL agent clamped maximum error to **$6.35\,\text{V}$**, protecting sensitive downstream DC bus loads.
 2. **Stable Non-Chattering Control:** The actor policy produces smooth, non-oscillatory control signals using less than $10\%$ of available power limits.
@@ -107,7 +97,7 @@ Where $R_{\text{bonus}} = 1.0 \times \left(1 - \frac{|V_{\text{err}}|}{2.0}\righ
 
 ---
 
-## 🛠️ How to Run & Reproduce
+##  How to Run & Reproduce
 
 ### 1. Evaluate Pre-Trained Model (Instant)
 To run the validation simulation using the pre-trained weights and view the comparison plots:
