@@ -1,5 +1,5 @@
 %% =========================================================================
-%  VALIDATION SCRIPT — Tests DCBusEnv v3 before full training
+%  VALIDATION SCRIPT — Tests DCBusEnv before full training
 %  Run this FIRST to verify everything works correctly.
 %  =========================================================================
 clear classes; clear; clc; close all;

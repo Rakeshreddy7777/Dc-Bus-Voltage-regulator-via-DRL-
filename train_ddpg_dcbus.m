@@ -1,7 +1,7 @@
 %% =========================================================================
-%  DEEP REINFORCEMENT LEARNING DC BUS CONTROLLER — VERSION 3
+%  DEEP REINFORCEMENT LEARNING DC BUS CONTROLLER 
 %  =========================================================================
-%  Matches DCBusEnv v3:
+%  Matches DCBusEnv :
 %    - Action space [-1, 1] (env scales internally to [-10, 10])
 %    - No scaling layer on actor (tanh output = action)
 %    - Concatenation-based critic

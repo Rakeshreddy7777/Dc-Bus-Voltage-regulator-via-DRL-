@@ -1,6 +1,5 @@
 classdef DCBusEnv < rl.env.MATLABEnvironment
-    % DCBUSENV DC Bus Voltage Regulation Environment — Version 3
-    %
+    % DCBUSENV DC Bus Voltage Regulation Environment —
     % Fixes applied (based on root-cause analysis of 3-step death loop):
     %   1. Reset at EXACTLY 300V — no random perturbation
     %      Agent learns load-ripple rejection first before handling offsets.
