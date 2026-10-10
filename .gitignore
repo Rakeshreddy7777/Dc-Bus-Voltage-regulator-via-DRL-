@@ -1,6 +1,10 @@
-# Old / temporary files
+# Old / temporary / local report files
 train_DRL_DCBus.m
 Trained_DRL_DCBus_Agent.mat
 savedAgents/
 *.asv
+*.autosave
+*.slxc
+slprj/
 .system_generated/
+Digital_Assessment_1_25BEL0017.pdf
